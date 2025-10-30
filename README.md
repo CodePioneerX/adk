@@ -53,37 +53,42 @@ adk --version
 
 ### Getting Started
 
+#### 1. Install ADK
 ```bash
-# 1. Install ADK
 curl -fsSL https://github.com/botpress/adk/releases/latest/download/install.sh | bash
-
-# 2. Create and set up your agent
-adk init my-agent
-
-# What this does:
-# - Prompts you to log in (if not already authenticated)
-# - Lets you choose a template:
-#   • Blank: Empty agent with no pre-configured integrations
-#   • Hello World: Starter agent with chat and webchat ready to use
-# - Lets you select your package manager (npm / pnpm / bun)
-# - Automatically installs all dependencies
-# - Automatically links your agent to Botpress
-
-# 3. Navigate to your agent directory
-cd my-agent
-
-# 4. (Optional) Add integrations as needed
-adk add linear
-...
-
-# 5. Start local development server
-adk dev
-
-# 6. (Optional) Test your agent in the terminal
-adk chat
-# Run this in a new terminal while 'adk dev' is running
-
 ```
+
+#### 2. Create and set up your agent
+```bash
+adk init my-agent
+```
+##### 2.1 Prompts you to log in (if not already authenticated)
+##### 2.2 Lets you choose a template:
+- **Blank**: Empty agent with no pre-configured integrations
+- **Hello World**: Starter agent with chat and webchat ready to use
+##### 2.3 Lets you select your package manager (npm / pnpm / bun)
+
+#### 3. Navigate to your agent directory
+```bash
+cd my-agent
+```
+
+#### 4. (Optional) Add integrations as needed
+```bash
+adk add slack
+```
+
+#### 5. Start local development server
+```bash
+adk dev
+```
+
+#### 6. (Optional) Test your agent in the terminal
+```bash
+adk chat
+```
+
+##### Run this in a new terminal while 'adk dev' is running
 
 ### Documentation
 
