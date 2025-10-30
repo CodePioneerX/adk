@@ -57,48 +57,32 @@ adk --version
 # 1. Install ADK
 curl -fsSL https://github.com/botpress/adk/releases/latest/download/install.sh | bash
 
-# 2. Create a new agent
+# 2. Create and set up your agent
 adk init my-agent
 
-# 3. Select "Blank" template
-# 4. Choose your package manager: npm / pnpm / bun
+# What this does:
+# - Prompts you to log in (if not already authenticated)
+# - Lets you choose a template:
+#   • Blank: Empty agent with no pre-configured integrations
+#   • Hello World: Starter agent with chat and webchat ready to use
+# - Lets you select your package manager (npm / pnpm / bun)
+# - Automatically installs all dependencies
+# - Automatically links your agent to Botpress
 
-# 5. Install dependencies
-# (choose one based on your package manager)
-npm install
-# or
-pnpm install
-# or
-bun install
+# 3. Navigate to your agent directory
+cd my-agent
 
-# 6. Install required Botpress packages
-npm i @botpress/sdk@4.17.1 @botpress/runtime@1.3.4
-# or
-pnpm add @botpress/sdk@4.17.1 @botpress/runtime@1.3.4
-# or
-bun add @botpress/sdk@4.17.1 @botpress/runtime@1.3.4
+# 4. (Optional) Add integrations as needed
+adk add linear
+...
 
-# 7. Install the Botpress CLI globally
-npm install -g @botpress/cli@4.15.0
-# (use sudo if required)
-
-# 8. Log in and link your agent
-adk login
-adk link
-# Select "Create new Bot" when prompted
-
-# 9. Add the chat capability
-adk install chat
-
-# 10. Update your agent files
-# - Edit conversation/index.ts
-# - Edit agent.config.ts
-
-# 11. Start local development
+# 5. Start local development server
 adk dev
 
-12. (In a new terminal) Chat with your agent
+# 6. (Optional) Test your agent in the terminal
 adk chat
+# Run this in a new terminal while 'adk dev' is running
+
 ```
 
 ### Documentation
